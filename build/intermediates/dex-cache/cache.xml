@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/exploded-aar/me.dm7.barcodescanner/zxing/1.8.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c87c4f493c82d2de01bddf6b1084c92dd670b053">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/classes-739fc749299d63c79b91ceeaedf87f002cb459a9.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.0/e019d15a13a9786f881141d2df6654b8510bce8b/core-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/core-3.2.0-b7a7b15a2e2c4691035634123fd60735cd68e62d.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/classes-db253e84af20c67ce631e795db06a5ed94c166cd.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/classes-eec9eb2299ae3bfedb21b8ced773698137f6ad36.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/exploded-aar/me.dm7.barcodescanner/core/1.8.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="96c83d4de6289a3f674165f896ac992564a7138d">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/classes-aa9c208ffb34b40a0ac1f21a394f5d56a6924994.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/Apps/adt-bundle-linux-x86-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-900e9ffb74d79e5811b6bfa81916c628b365ae5a.jar" />
+    </item>
+    <item
+        jar="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/home/arifcebe/workspace/project_latihan_android/barcodescanner/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-b861b1a8a0974f6c15db52b59637891416ddab4e.jar" />
+    </item>
+
+</items>
