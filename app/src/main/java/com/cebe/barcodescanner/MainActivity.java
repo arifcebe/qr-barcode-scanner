@@ -7,7 +7,6 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Spannable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -22,33 +21,33 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class MainActivity extends AppCompatActivity
         implements ZXingScannerView.ResultHandler {
-    private ZXingScannerView mScannerView;
+    private ZXingScannerView scannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
-        mScannerView = new ZXingScannerView(this){
+        scannerView = new ZXingScannerView(this){
             @Override
             protected IViewFinder createViewFinderView(Context context) {
-                return new CustomViewFinderView(context);
+                return new CustomViewFinder(context);
             }
         };
-        setContentView(mScannerView);
+        setContentView(scannerView);
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mScannerView.setResultHandler(this);
-        mScannerView.startCamera();
+        scannerView.setResultHandler(this);
+        scannerView.startCamera();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mScannerView.stopCamera();
+        scannerView.stopCamera();
     }
 
     @Override
@@ -75,47 +74,61 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void handleResult(Result result) {
+        /**
+         * tampilkan hasil dari scanning
+         */
         Toast.makeText(MainActivity.this, "content : "+result.getText().toString()+
                 ", format = "+result.getBarcodeFormat().toString(),
                 Toast.LENGTH_LONG)
             .show();
     }
 
-    private static class CustomViewFinderView extends ViewFinderView{
+    /**
+     * custom layout untuk menampilkan pesan saat melakukan scanning
+     */
+    private static class CustomViewFinder extends ViewFinderView{
 
-        public static final String TRADE_MARK_TEXT = "cebe_ganteng";
-        public static final int TRADE_MARK_TEXT_SIZE_SP = 40;
+        public static final String TRADE_MARK_TEXT = "scan pendamping hidupmu";
+        public static final int TRADE_MARK_TEXT_SIZE_SP = 20;
         public final Paint PAINT = new Paint();
 
-        public CustomViewFinderView(Context context) {
+        public CustomViewFinder(Context context) {
             super(context);
             init();
         }
 
-        public CustomViewFinderView(Context context, AttributeSet attrs) {
+        public CustomViewFinder(Context context, AttributeSet attrs) {
             super(context, attrs);
             init();
         }
 
+        /**
+         * setting tulisan untuk menampilkan pesan saat scanning.
+         * yang diatur: warna tulisan, ukuran huruf
+         */
         private void init(){
-            PAINT.setColor(Color.BLUE);
+            PAINT.setColor(Color.GREEN);
             PAINT.setAntiAlias(true);
             float textPixelSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                     TRADE_MARK_TEXT_SIZE_SP,getResources().getDisplayMetrics());
             PAINT.setTextSize(textPixelSize);
         }
 
+        /**
+         * method ini digunakan untuk mengatur tempat tampilan tulisan
+         * @param canvas
+         */
         private void drawTradeMark(Canvas canvas){
             Rect framingRect = getFramingRect();
             float tradeMarkTop;
             float tradeMarkLef;
 
             if(framingRect != null){
-                tradeMarkTop = framingRect.bottom + PAINT.getTextSize() + 10;
+                tradeMarkTop = framingRect.bottom + PAINT.getTextSize() + 5;
                 tradeMarkLef = framingRect.left;
             }else{
-                tradeMarkTop = 10;
-                tradeMarkLef = canvas.getHeight() - PAINT.getTextSize() - 10;
+                tradeMarkTop = 5;
+                tradeMarkLef = canvas.getHeight() - PAINT.getTextSize() - 5;
 
             }
             canvas.drawText(TRADE_MARK_TEXT,tradeMarkLef,tradeMarkTop,PAINT);
